@@ -1,7 +1,7 @@
-# name: discourse-ubuntu-sso
+# name: discourse-ubuntu-login
 # about: Ubuntu SSO support for Discourse
-# version: 0.3
-# authors: Sam Saffron, Marco Ceppi
+# version: 0.1
+# authors: Sam Saffron, Marco Ceppi, Gustavo
 
 if ENV["DISCOURSE_UBUNTU_LOGIN"] == "true"
 
