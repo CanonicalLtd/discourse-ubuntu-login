@@ -14,12 +14,12 @@ auth_provider :title => 'with Ubuntu',
 register_css <<CSS
 
 .btn-social.ubuntu {
-  background: #dd4814;
+  background: #772953;
 }
 
 .btn-social.ubuntu:before {
   font-family: Ubuntu;
-  content: "U";
+  content: url(https://niemeyer.s3.amazonaws.com/discourse-ubuntu-login-icon.png);
 }
 
 CSS
