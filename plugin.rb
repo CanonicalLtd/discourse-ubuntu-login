@@ -1,7 +1,9 @@
 # name: discourse-ubuntu-sso
 # about: Ubuntu SSO support for Discourse
-# version: 0.2
+# version: 0.3
 # authors: Sam Saffron, Marco Ceppi
+
+if ENV["DISCOURSE_UBUNTU_LOGIN"] == "true"
 
 auth_provider :title => 'with Ubuntu',
               :authenticator => Auth::OpenIdAuthenticator.new('ubuntu','https://login.ubuntu.com', trusted: true),
@@ -21,3 +23,5 @@ register_css <<CSS
 }
 
 CSS
+
+end
