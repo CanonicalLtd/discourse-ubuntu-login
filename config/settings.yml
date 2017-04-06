@@ -1,0 +1,4 @@
+plugins:
+  ubuntu_login_enabled:
+    default: false
+    client: true

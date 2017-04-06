@@ -1,11 +1,12 @@
 # name: discourse-ubuntu-login
 # about: Ubuntu SSO support for Discourse
-# version: 0.1
-# authors: Sam Saffron, Marco Ceppi, Gustavo
+# version: 1.0
+# authors: Sam Saffron, Marco Ceppi, Gustavo Niemeyer
 
-if ENV["DISCOURSE_UBUNTU_LOGIN"] == "true"
+enabled_site_setting :ubuntu_login_enabled
 
 auth_provider :title => 'with Ubuntu',
+              :enabled_setting => 'ubuntu_login_enabled',
               :authenticator => Auth::OpenIdAuthenticator.new('ubuntu','https://login.ubuntu.com', trusted: true),
               :message => 'Authenticating with Ubuntu (make sure pop up blockers are not enabled)',
               :frame_width => 1000,   # the frame size used for the pop up window, overrides default
@@ -23,5 +24,3 @@ register_css <<CSS
 }
 
 CSS
-
-end
